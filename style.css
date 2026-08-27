@@ -1,0 +1,204 @@
+/* Mengatur tampilan dasar seluruh halaman */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+
+  /* Ubah bagian display flex di body agar susunannya dari atas ke bawah */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Mengatur kotak kartu utama */
+/* Mengatur kotak kartu utama */
+.card {
+  background-color: white;
+  width: 320px;
+  padding: 30px;
+  border-radius: 15px; /* Membuat sudut kotak melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
+  text-align: center; /* Membuat semua teks di dalam kartu ke tengah */
+}
+
+/* Mengatur foto profil */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Membuat gambar menjadi bulat sempurna */
+  object-fit: cover;
+  border: 3px solid #007bff; /* Garis tepi biru di sekitar foto */
+  /* border: 3px solid purple; /* Ubah #007bff menjadi purple */
+}
+
+/* Mengatur nama utama */
+h1 {
+  font-size: 24px;
+  color: #333333;
+  margin: 15px 0 5px 0;
+}
+
+/* Mengatur teks pekerjaan/title */
+.title {
+  color: #007bff;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+/* Mengatur teks biodata */
+.bio {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Mengatur tombol */
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s; /* Efek transisi halus saat tombol di-hover */
+}
+
+/* Efek saat kursor mouse menyentuh tombol */
+.btn:hover {
+  background-color: #0056b3; /* Warna biru menjadi lebih gelap */
+}
+
+/* Memberi jarak antara ikon WhatsApp dan tulisan */
+/* Mengatur ukuran dan posisi logo WhatsApp */
+.wa-icon {
+  width: 30px; /* Ukuran lebar ikon */
+  height: 30px; /* Ukuran tinggi ikon */
+  margin-right: 8px; /* Jarak antara ikon dan tulisan */
+  vertical-align: middle; /* Membuat ikon sejajar vertikal dengan teks */
+}
+
+/* --- SAKTI NYA FLEXBOX DI SINI --- */
+
+/* Mengatur bar menu utama */
+.navbar {
+  display: flex; /* Aktifkan mode Flexbox */
+  justify-content: space-between; /* Logo di kiri mentok, Menu di kanan mentok */
+  align-items: center; /* Membuat konten sejajar lurus secara vertikal */
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Mengatur teks logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Mengatur daftar menu agar berjejer ke samping */
+.nav-links {
+  display: flex; /* Aktifkan mode Flexbox untuk daftar menu */
+  list-style: none; /* Menghilangkan titik bullet bawaan HTML */
+  margin: 0;
+  padding: 0;
+}
+
+/* Memberikan jarak antar menu */
+.nav-links li {
+  margin-left: 20px;
+}
+
+/* Menghias teks tautan menu */
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Efek saat menu disentuh kursor */
+.nav-links a:hover {
+  color: #007bff; /* Berubah warna jadi biru */
+}
+
+/* Memberi jarak atas pada kartu agar tidak terlalu menempel ke navbar */
+.card {
+  margin-top: 50px;
+}
+
+/* --- BATAS LAYAR UNTUK HP & TABLET --- */
+@media screen and (max-width: 768px) {
+  /* 1. Mengubah susunan Navbar dari samping menjadi ke bawah */
+  .navbar {
+    flex-direction: column; /* Membuat logo dan menu menumpuk atas-bawah */
+    gap: 15px; /* Memberi jarak antara logo dan menu */
+    padding: 15px 20px; /* Memperkecil jarak dalam di layar sempit */
+    text-align: center;
+  }
+
+  /* 2. Mengatur ulang daftar link menu di HP */
+  .nav-links {
+    justify-content: center; /* Membuat menu berjejer pas di tengah layar HP */
+    width: 100%;
+  }
+
+  /* 3. Menghilangkan margin kiri bawaan, diganti jarak merata */
+  .nav-links li {
+    margin: 0 10px; /* Jarak kiri-kanan seimbang antar menu */
+  }
+
+  /* 4. Mengubah ukuran kartu agar tidak kepotong di HP */
+  .card {
+    width: 85%; /* Menggunakan persen agar fleksibel mengikuti lebar HP */
+    padding: 20px; /* Sedikit memperkecil padding dalam kartu */
+    margin-top: 30px; /* Mengurangi jarak atas */
+  }
+}
+
+/* Menghias Tombol Sakelar Mode Gelap */
+.theme-btn {
+  background: #e4e6eb;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #d8deda;
+}
+
+/* --- KELAS KHUSUS JIKA MODE GELAP AKTIF --- */
+/* Kelas ini nanti akan ditempelkan oleh JavaScript secara otomatis */
+body.dark-mode {
+  background-color: #18191a; /* Latar belakang jadi hitam pekat */
+}
+
+body.dark-mode .card {
+  background-color: #242526; /* Kartu jadi abu-abu gelap */
+  color: white; /* Teks utama jadi putih */
+}
+
+body.dark-mode h1 {
+  color: white; /* Nama jadi putih */
+}
+
+body.dark-mode .navbar {
+  background-color: #242526; /* Navbar jadi gelap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo,
+body.dark-mode .nav-links a {
+  color: #e4e6eb; /* Teks navbar jadi putih pudar */
+}
