@@ -30,6 +30,7 @@ body {
   object-fit: cover;
   border: 3px solid #007bff; /* Garis tepi biru di sekitar foto */
   /* border: 3px solid purple; /* Ubah #007bff menjadi purple */
+  margin-top: 15px;
 }
 
 /* Mengatur nama utama */
@@ -201,4 +202,34 @@ body.dark-mode .navbar {
 body.dark-mode .logo,
 body.dark-mode .nav-links a {
   color: #e4e6eb; /* Teks navbar jadi putih pudar */
+}
+
+/* Menghias Wadah Jam Digital */
+.clock-container {
+    background-color: #f0f2f5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e4e6eb;
+    transition: 0.3s ease;
+}
+
+/* Mengatur Teks Jam */
+#clock {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; /* Font monospace agar angka tidak bergeser saat berganti */
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/* --- Pengaturan Tambahan Saat Mode Gelap Aktif --- */
+body.dark-mode .clock-container {
+    background-color: #18191a;
+    border-color: #3a3b3c;
+}
+
+body.dark-mode #clock {
+    color: #00ff66; /* Jam berubah warna hijau neon yang menyala di mode gelap */
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.5); /* Efek cahaya menyala */
 }
