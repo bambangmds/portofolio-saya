@@ -233,3 +233,19 @@ body.dark-mode #clock {
     color: #00ff66; /* Jam berubah warna hijau neon yang menyala di mode gelap */
     text-shadow: 0 0 10px rgba(0, 255, 102, 0.5); /* Efek cahaya menyala */
 }
+
+/* Menghias kolom input angka pada game */
+#tebakan-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+#tebakan-input:focus {
+    border-color: #007bff; /* Berubah warna biru saat diklik */
+}

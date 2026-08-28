@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Angka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama (Sama seperti halaman depan) -->
+    <nav class="navbar">
+        <div class="logo">PortoKu</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="game.html">Main Game</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Kotak Utama Game -->
+    <div class="card">
+        <h1>🎮 Tebak Angka</h1>
+        <p class="bio">Komputer telah memilih angka rahasia antara **1 sampai 20**. Bisakah kamu menebaknya?</p>
+        
+        <!-- Input untuk memasukkan tebakan -->
+        <input type="number" id="tebakan-input" placeholder="Masukkan angka..." min="1" max="20">
+        
+        <!-- Tombol untuk mengecek tebakan -->
+        <button id="cek-btn" class="btn" style="margin-top: 15px; width: 100%;">Tebak!</button>
+        
+        <!-- Tempat menampilkan pesan petunjuk hasil tebakan -->
+        <p id="pesan-game" class="title" style="margin-top: 20px; font-size: 18px;">Mulai menebak...</p>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript khusus game -->
+    <script src="game.js"></script>
+</body>
+</html>
